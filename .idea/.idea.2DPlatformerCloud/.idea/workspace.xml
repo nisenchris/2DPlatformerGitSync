@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b674d34e-d534-4efb-a9f5-e9d9b89c7fe6" name="Changes" comment="" />
+    <list default="true" id="b674d34e-d534-4efb-a9f5-e9d9b89c7fe6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.2DPlatformerCloud/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2DPlatformerCloud/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,13 +53,14 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632938077746</updated>
-      <workItem from="1632938077748" duration="362000" />
+      <workItem from="1632938077748" duration="492000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
