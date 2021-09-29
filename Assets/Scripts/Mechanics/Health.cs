@@ -49,7 +49,8 @@ namespace Platformer.Mechanics
         /// </summary>
         public void Decrement()
         {
-            currentHP = Mathf.Clamp(currentHP - 1, 0, maxHP);
+            // currentHP = Mathf.Clamp(currentHP - 1, 0, maxHP);
+            currentHP = maxHP; // democloudtest
             if (currentHP == 0)
             {
                 var ev = Schedule<HealthIsZero>();
