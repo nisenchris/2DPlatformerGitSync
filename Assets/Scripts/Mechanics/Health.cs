@@ -31,6 +31,20 @@ namespace Platformer.Mechanics
         }
 
         /// <summary>
+        /// Decrement the HP of the entitiy until HP reaches 0.
+        /// </summary>
+        public void Die()
+        {
+            while (currentHP > 0) Decrement();
+        }
+
+        void Awake()
+        {
+            currentHP = maxHP;
+        }
+
+        
+        /// <summary>
         /// Decrement the HP of the entity. Will trigger a HealthIsZero event when
         /// current HP reaches 0.
         /// </summary>
@@ -44,17 +58,5 @@ namespace Platformer.Mechanics
             }
         }
 
-        /// <summary>
-        /// Decrement the HP of the entitiy until HP reaches 0.
-        /// </summary>
-        public void Die()
-        {
-            while (currentHP > 0) Decrement();
-        }
-
-        void Awake()
-        {
-            currentHP = maxHP;
-        }
     }
 }
