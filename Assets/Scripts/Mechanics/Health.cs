@@ -39,6 +39,8 @@ namespace Platformer.Mechanics
         {
             // currentHP = Mathf.Clamp(currentHP - 1, 0, maxHP);
             currentHP = maxHP;
+            currentHP = maxHP;
+            currentHP = maxHP;
             
             if (currentHP == 0)
             {
