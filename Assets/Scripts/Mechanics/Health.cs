@@ -22,6 +22,10 @@ namespace Platformer.Mechanics
 
         int currentHP;
 
+        void Awake()
+        {
+            currentHP = maxHP;
+        }
         /// <summary>
         /// Increment the HP of the entity.
         /// </summary>
@@ -57,6 +61,29 @@ namespace Platformer.Mechanics
                 var ev = Schedule<HealthIsZero>();
                 ev.health = this;
             }
+        }
+
+        /// <summary>
+        /// Decrement the HP of the entitiy until HP reaches 0.
+        /// </summary>
+        public void Die()
+        {
+            while (currentHP > 0) Decrement();
+        }
+
+
+
+        /// <summary>
+        /// Decrement the HP of the entitiy until HP reaches 0.
+        /// </summary>
+        public void Die()
+        {
+            while (currentHP > 0) Decrement();
+        }
+
+        void Awake()
+        {
+            currentHP = maxHP;
         }
     }
 }
