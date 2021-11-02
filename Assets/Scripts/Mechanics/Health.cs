@@ -22,10 +22,6 @@ namespace Platformer.Mechanics
 
         int currentHP;
 
-        void Awake()
-        {
-            currentHP = maxHP;
-        }
         /// <summary>
         /// Increment the HP of the entity.
         /// </summary>
@@ -34,22 +30,7 @@ namespace Platformer.Mechanics
             currentHP = Mathf.Clamp(currentHP + 1, 0, maxHP);
         }
 
-
-
         /// <summary>
-        /// Decrement the HP of the entitiy until HP reaches 0.
-        /// </summary>
-        public void Die()
-        {
-            while (currentHP > 0) Decrement();
-        }
-
-        void Awake()
-        {
-            currentHP = maxHP;
-        }
-
-                /// <summary>
         /// Decrement the HP of the entity. Will trigger a HealthIsZero event when
         /// current HP reaches 0.
         /// </summary>
@@ -62,16 +43,6 @@ namespace Platformer.Mechanics
                 ev.health = this;
             }
         }
-
-        /// <summary>
-        /// Decrement the HP of the entitiy until HP reaches 0.
-        /// </summary>
-        public void Die()
-        {
-            while (currentHP > 0) Decrement();
-        }
-
-
 
         /// <summary>
         /// Decrement the HP of the entitiy until HP reaches 0.
