@@ -30,18 +30,6 @@ namespace Platformer.Mechanics
             _audio = GetComponent<AudioSource>();
             spriteRenderer = GetComponent<SpriteRenderer>();
         }
-
-        void OnCollisionEnter2D(Collision2D collision)
-        {
-            var player = collision.gameObject.GetComponent<PlayerController>();
-            if (player != null)
-            {
-                var ev = Schedule<PlayerEnemyCollision>();
-                ev.player = player;
-                ev.enemy = this;
-            }
-        }
-
         void Update()
         {
             if (path != null)
@@ -50,6 +38,19 @@ namespace Platformer.Mechanics
                 control.move.x = Mathf.Clamp(mover.Position.x - transform.position.x, -1, 1);
             }
         }
+
+        void OnCollisionEnter2D(Collision2D collision)
+        {
+            var player = collision.gameObject.GetComponent<PlayerController>();
+            if (player != null)
+            {
+                var ev = Schedule<PlayerEnemyCollision>();
+                ev.player = player;
+                ev.enemy = enemy;
+            }
+        }
+
+        
 
     }
 }
