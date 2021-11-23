@@ -37,7 +37,7 @@ namespace Platformer.Mechanics
         public void Decrement()
         {
             // currentHP = Mathf.Clamp(currentHP - 1, 0, maxHP);
-            currentHP = maxHP;
+            currentHP = maxHP; // change here
 
             if (currentHP == 0)
             {
